@@ -1,0 +1,103 @@
+body {
+    background-image: url('/img/background.png');
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container {
+    border: 1px solid red;
+}
+
+.row {
+    border: 1px solid green;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4,
+.col-md-5, .col-md-6, .col-md-7, .col-md-8,
+.col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    border: 1px solid blue;
+}
+
+
+#main-container {
+    /* Align the container in the middle of the page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main-row {
+
+}
+
+#ui-wrapper {
+    padding: 2em;
+    border-radius: 1em;
+    background-color: rgba(150, 150, 150, 0.3);
+    backdrop-filter: blur(0.2em);
+}
+
+.agenda-label {
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.agenda-value {
+    font-size: 1.7em;
+    text-align: right;
+
+    background-color: white;
+    padding: 0.025em 0.2em;
+    border-radius: 0.2em;
+}
+
+#timer-div {
+    margin: 0;
+}
+
+#timer-div button {
+    font-size: 2em;
+}
+
+#timer-text {
+    font-size: 8em;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: white;
+    padding: 0.025em 0.2em;
+    border-radius: 0.2em;
+}
+
+.list-header {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: white;
+    padding: 0.025em 0.2em;
+    border-radius: 0.2em;
+}
+
+.list-div {
+    padding: 0 1em 0 1em;
+}
+
+.list-group {
+    background-color: white;
+    min-height: 25em;
+    max-height: 25em;
+    min-width: 102%;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    font-size: 1.75em;
+    font-weight: bold;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "paimun-software",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariano García Alipi",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^10.4.0",
+    "typescript": "^5.3.3"
+  }
+}

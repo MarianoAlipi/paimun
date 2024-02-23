@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container-fluid" id="main-container">
+        
+        <!-- Main row -->
+        <div class="row" id="main-row">
+            
+            <!-- UI wrapper -->
+            <div class="col-10 offset-1" id="ui-wrapper">
+                <!-- UI row -->
+                <div class="row" id="ui-row">
+                    
+                    <!-- Agenda -->
+                    <div class="col-2">
+                        <div class="row">
+                            <div class="col-8">
+                                <span class="agenda-label">Questions:</span>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <span class="agenda-value">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <span class="agenda-label">Follow-ups:</span>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <span class="agenda-value">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timer -->
+                    <div class="col-4" id="timer-div">
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <span id="timer-text">0:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 my-2">
+                                <button id="start-stop-timer-btn" class="col-8 offset-2 btn btn-primary btn-block">Start</button>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 my-2">
+                                <button id="reset-timer-btn" class="col-8 offset-2 btn btn-success btn-block">Reset</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 my-5">
+                                <button id="set-caucus-btn" class="col-8 offset-2 btn btn-warning btn-block">Set a caucus</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lists -->
+                    <div class="col-6" id="lists-div">
+                        <div class="row">
+                            
+                            <!-- Speakers' list -->
+                            <div class="col-4 list-div">
+                                
+                                <div class="row">
+                                    <span class="list-header">Speakers' list</span>
+                                </div>
+                                <div class="row">
+                                    <ol class="list-group list-group-numbered" id="speakers-list-group">
+                                    </ol>
+                                </div>
+                                <div class="row my-1">
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" id="name-sl">
+                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-sl">
+                                </div>
+                                <div class="row">
+                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Remove" id="remove-button-sl">
+                                </div>
+                                <div class="row py-1">
+                                    <input type="button" class="my-1 col-10 offset-1 btn btn-warning btn-block" value="▲" id="up-button-sl">
+                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="▼" id="down-button-sl">
+                                </div>
+                            </div>
+                            
+                            <!-- Verbal warnings -->
+                            <div class="col-4 list-div">
+                                <div class="row">
+                                    <span class="list-header">Verbal warnings</span>
+                                </div>
+                                <div class="row">
+                                    <ul class="list-group" id="verbal-warnings-list-group">
+                                        <li class="list-group-item list-group-item-action">Cras justo odio
+                                            <span class="badge text-bg-primary rounded-pill">2</span>
+                                        </li>
+                                        <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item list-group-item-action">Morbi leo risus</li>
+                                        <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
+                                        <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                                    </ul>
+                                </div>
+                                <div class="row my-1">
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation">
+                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add">
+                                </div>
+                                <div class="row">
+                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Remove">
+                                </div>
+                                <div class="row my-1">
+                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning">
+                                </div>
+                            </div>
+                            
+                            <!-- Written warnings -->
+                            <div class="col-4 list-div">
+                                <div class="row">
+                                    <span class="list-header">Written warnings</span>
+                                </div>
+                                <div class="row">
+                                    <ul class="list-group" id="written-warnings-list-group">
+                                        <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                                        <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item list-group-item-action">Morbi leo risus</li>
+                                        <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
+                                        <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                                    </ul>
+                                </div>
+                                <div class="row my-1">
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation">
+                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add">
+                                </div>
+                                <div class="row">
+                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Remove">
+                                </div>
+                                <div class="row my-1">
+                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End lists -->
+                    
+                    <!-- Bottom row -->
+                    <div class="row">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                            <div class="row">
+                                <button class="btn btn-primary btn-block">Change language</button>
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" aria-label="Checkbox for saving data">
+                                            <span>Save data</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End bottom row -->
+                    
+                </div> <!-- End UI row -->
+            </div> <!-- End UI wrapper -->
+        </div> <!-- End main row -->
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
