@@ -104,7 +104,6 @@ body {
     background-color: whitesmoke;
     min-height: 45vh;
     max-height: 45vh;
-    min-width: 102%;
     overflow: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -114,6 +113,8 @@ body {
 }
 
 .list-group .list-group-item {
+    min-width: 104%;
+
     cursor: pointer;
     user-select: none;
 }
