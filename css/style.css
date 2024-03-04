@@ -76,6 +76,16 @@ body {
     border-radius: 0.2em;
 }
 
+#timer-div #edit-agenda-btn {
+    font-size: 1.3em;
+    min-height: 3em;
+}
+
+#timer-div button.small-btn {
+    font-size: 1.3em;
+    /* height: 10px; */
+}
+
 .list-header {
     font-size: 2em;
     font-weight: bold;

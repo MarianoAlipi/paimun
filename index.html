@@ -5,6 +5,8 @@
     <title>PAIMUN Software</title>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-icons.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,6 +23,12 @@
                     
                     <!-- Agenda -->
                     <div class="col-2">
+
+                        <div class="row">
+                            <span class="col-12 agenda-label">Agenda</span>
+                        </div>
+
+
                         <div class="row">
                             <div class="col-8">
                                 <span class="agenda-label">Questions:</span>
@@ -52,20 +60,30 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-12 my-2">
-                                <button id="start-stop-timer-btn" class="col-8 offset-2 btn btn-primary btn-block">Start</button>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-12 my-2">
-                                <button id="reset-timer-btn" class="col-8 offset-2 btn btn-success btn-block">Reset</button>
+                            <div class="my-2">
+                                <!-- Set agenda -->
+                                <button id="edit-agenda-btn" class="col-3 offset btn btn-secondary">
+                                    <i class="bi-pencil-square"></i>
+                                    Agenda
+                                </button>
+                                <!-- Start/stop -->
+                                <button id="start-stop-timer-btn" class="col-6 btn btn-primary btn-">
+                                    <i class="bi-play-fill"></i>
+                                    Start
+                                </button>
+                                <!-- Reset -->
+                                <button id="reset-timer-btn" class="col-2 btn btn-success btn-" disabled>
+                                    <i class="bi-arrow-counterclockwise"></i>
+                                </button>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-12 my-5">
-                                <button id="set-caucus-btn" class="col-8 offset-2 btn btn-warning btn-block">Set a caucus</button>
+                            <div class="col-12 my-2">
+                                <button id="set-caucus-btn" class="col-6 offset-3 btn btn-warning small-btn">
+                                    <i class="bi-stopwatch"></i>
+                                    Caucus
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -85,15 +103,25 @@
                                     </ol>
                                 </div>
                                 <div class="row my-1">
-                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" id="name-sl">
-                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-sl" disabled>
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" autocomplete="off" aria-autocomplete="none" id="name-sl">
+                                    <button class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-sl" disabled>
+                                        <i class="bi-plus-circle"></i>
+                                        Add
+                                    </button>
                                 </div>
                                 <div class="row">
-                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Remove" id="remove-button-sl" disabled>
+                                    <button type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Remove" id="remove-button-sl" disabled>
+                                        <i class="bi-dash-circle"></i>
+                                        Remove
+                                    </button>
                                 </div>
                                 <div class="row py-1">
-                                    <input type="button" class="my-1 col-10 offset-1 btn btn-warning btn-block" value="▲" id="up-button-sl" disabled>
-                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="▼" id="down-button-sl" disabled>
+                                    <button class="my-1 col-10 offset-1 btn btn-warning btn-block" value="▲" id="up-button-sl" disabled>
+                                        <i class="bi-caret-up-fill"></i>
+                                    </button>
+                                    <button class="col-10 offset-1 btn btn-warning btn-block" value="▼" id="down-button-sl" disabled>
+                                        <i class="bi-caret-down-fill"></i>
+                                    </button>
                                 </div>
                             </div>
                             
@@ -107,14 +135,23 @@
                                     </ul>
                                 </div>
                                 <div class="row my-1">
-                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" id="name-vwl">
-                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-vwl" disabled>
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" autocomplete="off" aria-autocomplete="none" id="name-vwl">
+                                    <button class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-vwl" disabled>
+                                        <i class="bi-plus-circle"></i>
+                                        Add
+                                    </button>
                                 </div>
                                 <div class="row">
-                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Decrease warning / Remove" id="remove-button-vwl" disabled>
+                                    <button class="col-10 offset-1 btn btn-danger btn-block" value="Decrease warning / Remove" id="remove-button-vwl" disabled>
+                                        <i class="bi-dash-circle"></i>
+                                        Decrease warning / Remove
+                                    </button>
                                 </div>
                                 <div class="row my-1">
-                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning" id="increment-warning-button-vwl" disabled>
+                                    <button class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning" id="increment-warning-button-vwl" disabled>
+                                        <i class="bi-patch-plus"></i>
+                                        Increment warning
+                                    </button>
                                 </div>
                             </div>
                             
@@ -128,14 +165,23 @@
                                     </ul>
                                 </div>
                                 <div class="row my-1">
-                                    <input type="text" class="form-control my-1" placeholder="Add a delegation" id="name-wwl">
-                                    <input type="button" class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-wwl" disabled>
+                                    <input type="text" class="form-control my-1" placeholder="Add a delegation"  autocomplete="off" aria-autocomplete="none" id="name-wwl">
+                                    <button class="col-10 offset-1 btn btn-primary btn-block" value="Add" id="add-button-wwl" disabled>
+                                        <i class="bi-plus-circle"></i>
+                                        Add
+                                    </button>
                                 </div>
                                 <div class="row">
-                                    <input type="button" class="col-10 offset-1 btn btn-danger btn-block" value="Decrease warning / Remove" id="remove-button-wwl" disabled>
+                                    <button class="col-10 offset-1 btn btn-danger btn-block" value="Decrease warning / Remove" id="remove-button-wwl" disabled>
+                                        <i class="bi-dash-circle"></i>
+                                        Decrease warning / Remove
+                                    </button>
                                 </div>
                                 <div class="row my-1">
-                                    <input type="button" class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning" id="increment-warning-button-wwl" disabled>
+                                    <button class="col-10 offset-1 btn btn-warning btn-block" value="Increment warning" id="increment-warning-button-wwl" disabled>
+                                        <i class="bi-patch-plus"></i>
+                                        Increment warning
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +192,10 @@
                         <div class="col-10"></div>
                         <div class="col-2">
                             <div class="row">
-                                <button class="btn btn-primary btn-block">Change language</button>
+                                <button class="btn btn-primary btn-block">
+                                    <i class="bi-globe"></i>
+                                    Change language
+                                </button>
                             </div>
                             <div class="row">
                                 <div class="input-group">
@@ -167,6 +216,7 @@
     </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="module" src="js/index.js"></script>
     <script src="js/timer.js"></script>
 </body>
